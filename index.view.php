@@ -25,15 +25,8 @@
 
     <h1>
       <?php
-        $name = htmlspecialchars($_GET['name']);
 
-        $greetings = "Hello World i ";
-
-        echo $greetings;
-
-        echo "Hello $name <br>";
-
-        echo "Hello " . htmlspecialchars($_GET['name']);
+        echo $greeting;
 
       ?>
     </h1>
