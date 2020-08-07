@@ -35,6 +35,11 @@
     ]
   ];
 
+  $tasks[2]['title'] = 'Insert new object into array';
+  $tasks[2]['due'] = 'As soon as possible';
+  $tasks[2]['assigned_to'] = 'Michał';
+  $tasks[2]['completed'] = True;
+
 require 'index.view.php'
 
  ?>

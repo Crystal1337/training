@@ -31,6 +31,8 @@
 
   </header>
 
+<!-- FOREACH FUNCTION WITH ARRAYS -->
+
   <ul>
     <?php
     foreach($names as $name)
@@ -49,7 +51,12 @@
     ?>
   </ul>
 
-  <h1>Task for the day</h1>
+<!-- FOREACH FUNCTION WITH ARRAYS -->
+
+
+<!-- PRINTING OUT MULTIELEMENT ARRAY AS WELL AS ONE ELEMENT OF THAT ARRAY -->
+
+  <h1>Task for today</h1>
   <ul>
     <?php
   //  foreach($tasks as $task)
@@ -62,31 +69,50 @@
     ?>
   </ul>
 
-  <h1>Task for the day</h1>
+<!-- PRINTING OUT MULTIELEMENT ARRAY AS WELL AS ONE ELEMENT OF THAT ARRAY -->
+
+
+<!-- PRINTING OUT SPECIFIC TASK ELEMENTS-->
+
+  <h1>Task for tomorrow</h1>
   <ul>
     <li>
-      <strong> Name: </strong> <?php echo $tasks[0]['title']; ?>
+      <strong> Name: </strong> <?php echo $tasks[2]['title']; ?>
     </li>
     <li>
-      <strong> Due Date: </strong> <?php echo $tasks[0]['due']; ?>
+      <strong> Due Date: </strong> <?php echo $tasks[2]['due']; ?>
     </li>
     <li>
-      <strong> Assigned to: </strong> <?php echo $tasks[0]['assigned_to']; ?>
+      <strong> Assigned to: </strong> <?php echo $tasks[2]['assigned_to']; ?>
     </li>
+
+<!-- PRINTING OUT SPECIFIC TASK ELEMENTS-->
+
+
+<!-- 2 VARIATIONS OF IF STATEMENTS FOR TRUE/FALSE AND 2 VARIATIONS OF STANDARD IF STATEMENT -->
+
     <li>
       <strong> Status: </strong> <?php /*echo $tasks[0]['completed'] ? 'Complete' : 'Incomplete';*/
-      if($tasks[0]['completed'])
+      if($tasks[2]['completed'])
       {
-        echo 'Complete';
+        echo 'Complete &#9989';
       }
       else
       {
         echo 'Incomplete';
       }
       ?>
+      <?php if($tasks[2]['completed']) : ?>
+        <div> Good job! You've done it </div>
+      <?php else : ?>
+        <div>Eventually you'll gotta do it anyways</div>
+      <?php endif; ?>
     </li>
   </ul>
 
+<!-- 2 VARIATIONS OF IF STATEMENTS FOR TRUE/FALSE AND 2 VARIATIONS OF STANDARD IF STATEMENT -->
+
+  <?= count($tasks); ?> elements in the tasks array
 </body>
 
 </html>
