@@ -49,18 +49,43 @@
     ?>
   </ul>
 
+  <h1>Task for the day</h1>
   <ul>
     <?php
   //  foreach($tasks as $task)
 //    {
       foreach($tasks[1] as $key => $info)
       {
-        echo "<li><strong>$key</strong> $info </li>";
+        echo '<li><strong>' . ucwords($key) . ' : </strong>' . $info . '</li>';
       }
 //    }
     ?>
   </ul>
 
+  <h1>Task for the day</h1>
+  <ul>
+    <li>
+      <strong> Name: </strong> <?php echo $tasks[0]['title']; ?>
+    </li>
+    <li>
+      <strong> Due Date: </strong> <?php echo $tasks[0]['due']; ?>
+    </li>
+    <li>
+      <strong> Assigned to: </strong> <?php echo $tasks[0]['assigned_to']; ?>
+    </li>
+    <li>
+      <strong> Status: </strong> <?php /*echo $tasks[0]['completed'] ? 'Complete' : 'Incomplete';*/
+      if($tasks[0]['completed'])
+      {
+        echo 'Complete';
+      }
+      else
+      {
+        echo 'Incomplete';
+      }
+      ?>
+    </li>
+  </ul>
 
 </body>
 
