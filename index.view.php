@@ -25,13 +25,42 @@
 
     <h1>
       <?php
-
         echo $greeting;
-
       ?>
     </h1>
 
   </header>
+
+  <ul>
+    <?php
+    foreach($names as $name)
+    {
+      echo "<li>$name</li>";
+    }
+    ?>
+  </ul>
+
+  <ul>
+    <?php
+    foreach($person as $key => $feature)
+    {
+      echo "<li> <strong>$key = </strong>$feature</li>";
+    }
+    ?>
+  </ul>
+
+  <ul>
+    <?php
+  //  foreach($tasks as $task)
+//    {
+      foreach($tasks[1] as $key => $info)
+      {
+        echo "<li><strong>$key</strong> $info </li>";
+      }
+//    }
+    ?>
+  </ul>
+
 
 </body>
 
