@@ -1,24 +1,49 @@
 <?php
+require 'functions.php';
 
   $greeting = "Hello World";
 
-  /*arrays */
+/*arrays */
+
   $names = [
     'Michał',
     'Paweł',
     'Piotr'
   ];
 
-  $person = [
-    'age' => 31,
-    'name' => 'Michał',
-    'surname' => 'Nowak',
-    'city' => 'Kalisz'
+  $animals = [
+    'cat',
+    'dog',
+    'whale',
+    'monkey'
   ];
 
-  $person['postcode'] = '62-800';
+  $person = [
+    [
+      'age' => 31,
+      'name' => 'Andrzej',
+      'surname' => 'Markowski',
+      'city' => 'Poznań'
+    ],
+    [
+      'age' => 6,
+      'name' => 'Michał',
+      'surname' => 'Nowak',
+      'city' => 'Kalisz'
+    ],
+    [
+      'age' => 104,
+      'name' => 'Paweł',
+      'surname' => 'Kowalski',
+      'city' => 'Warszawa'
+    ]
+];
+
+/*  $person['postcode'] = '62-800'; */
+/*  unset($person['age']); */
+
     /*arrays */
-  unset($person['age']);
+
 
   $tasks = [
     [
@@ -39,6 +64,8 @@
   $tasks[2]['due'] = 'As soon as possible';
   $tasks[2]['assigned_to'] = 'Michał';
   $tasks[2]['completed'] = True;
+
+/*arrays */
 
 require 'index.view.php'
 

@@ -44,9 +44,12 @@
 
   <ul>
     <?php
-    foreach($person as $key => $feature)
+    foreach($person as $persons)
     {
-      echo "<li> <strong>$key = </strong>$feature</li>";
+      foreach($persons as $key => $feature)
+      {
+        echo "<li> <strong>$key = </strong>$feature</li>";
+      }
     }
     ?>
   </ul>
@@ -113,6 +116,19 @@
 <!-- 2 VARIATIONS OF IF STATEMENTS FOR TRUE/FALSE AND 2 VARIATIONS OF STANDARD IF STATEMENT -->
 
   <?= count($tasks); ?> elements in the tasks array
+<br>
+<?php
+  fdump('hello', 'my', 'love');
+  echo '<br>';
+  /*dd($tasks);*/
+  ageverify($person[0]['age']);
+  echo '<br>';
+  ageverify($person[1]['age']);
+  echo '<br>';
+  ageverify($person[2]['age']);
+?>
+
+
 </body>
 
 </html>
