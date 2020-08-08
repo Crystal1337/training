@@ -13,6 +13,9 @@
     <h2><?= $task->Description; ?> <?= $task->completed ? '&#9989' : '&#9998' ?></h2>
 
   <?php endforeach; ?>
+  <?php echo '<pre>';
+  var_dump($tasks);
+  echo '</pre>';?>
 </body>
 
 </html>
