@@ -20,7 +20,6 @@
 </head>
 
 <body>
-
   <header>
 
     <h1>
@@ -126,6 +125,11 @@
   ageverify($person[1]['age']);
   echo '<br>';
   ageverify($person[2]['age']);
+  $task = new Task('PLS');
+  var_dump($task->isComplete());
+  $task->complete();
+  var_dump($task->isComplete());
+  /*dd($tasks_oop);*/
 ?>
 
 
