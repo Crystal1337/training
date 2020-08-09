@@ -9,6 +9,13 @@
 </head>
 
 <body>
+
+  <nav>
+    <ul>
+    <li><a href="views/about.view.php">About page</a></li>
+    <li><a href="views/contact.view.php">Contact page</a></li>
+    </ul>
+  </nav>
   <?php foreach($tasks as $task) : ?>
     <h2><?= $task->Description; ?> <?= $task->completed ? '&#9989' : '&#9998' ?></h2>
 
