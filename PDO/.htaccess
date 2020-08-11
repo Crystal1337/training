@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /pdo/
+    RewriteRule ^.*$ index.php [END]
+</IfModule>
